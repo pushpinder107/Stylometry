@@ -12,16 +12,18 @@ public class characterCount {
 				
 			String valueWord=words.get(i+2);
 			if(!valueWord.contains(".")){
-				words.get(i+2).replace(".", "");
-				bigrams.put(words.get(i)+ " " + words.get(i+1), words.get(i+2));
+				//valueWord.replace('.', ' ');
+				//valueWord=valueWord.substring(0, valueWord.length()-1);
+				bigrams.put(words.get(i) + " "+ words.get(i+1), valueWord);
 								
 			}
 			else
 			{
 				//System.out.println("Valueword is"+ valueWord);
-				valueWord.replace(".", " ");
+				//valueWord.replace('.', ' ');
+				valueWord=valueWord.substring(0, valueWord.length()-1);
 				//words.get(i+2).replace(".", "");
-				bigrams.put(words.get(i)+words.get(i+1), words.get(i+2));
+				bigrams.put(words.get(i)+ " " +words.get(i+1), valueWord);
 				
 				
 				}
